@@ -32,7 +32,8 @@ or rewriting local refs to which its Linux UID already has write access.
   Current implementation has bounded requests/native commands and single dispatch,
   but no aggregate disk quota, full wall-clock deadline, or multi-instance scheduler.
 - Verify GitLab Enterprise and GitHub with disposable SSH/HTTPS identities and real
-  protected-branch behavior. Current end-to-end tests use local bare repositories.
+  protected-branch behavior. GitHub SSH/HTTPS feature writes and broker denials now have live evidence in
+  GITHUB-LIVE-TEST.md. GitLab Enterprise and provider-side protection conformance remain open.
 - Keep the configured default/protected branch manifest current. The implementation
   does not discover live provider rules. A remote default-branch rename can create drift.
 - Check all branch-triggered automation before enabling writes. Keep

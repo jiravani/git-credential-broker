@@ -4,6 +4,12 @@ This is reproducible evidence of specific controls. It is not proof that every
 bad or questionable agent action is impossible. Content safety and host isolation
 are separate from Git authorization.
 
+## Live-provider follow-up
+
+GitHub SSH and HTTPS checks now pass against disposable branches. See
+[GITHUB-LIVE-TEST.md](GITHUB-LIVE-TEST.md). This does not close Linux isolation
+or GitLab Enterprise gates. The original offline evidence below remains unchanged.
+
 ## Observed results
 
 - macOS ARM64: **143 tests passed**, zero failures, zero skips.

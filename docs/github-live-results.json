@@ -1,0 +1,44 @@
+{
+  "repository": "https://github.com/jiravani/git-credential-broker.git",
+  "results": [
+    {
+      "transport": "ssh",
+      "branch": "broker-e2e/20261018-073518/ssh",
+      "first": "762e56f7a11fb459dbf77171dd1a187900b100ed",
+      "final": "ed7a8c2341a1e1ea3c19cc5c151979d21bb6a3da",
+      "checks": [
+        "CLI create",
+        "fast-forward",
+        "idempotent replay",
+        "spent grant denied",
+        "protected/default/foreign branch denied",
+        "history rollback denied",
+        "changed plan denied",
+        "remote tip preserved"
+      ]
+    },
+    {
+      "transport": "https",
+      "branch": "broker-e2e/20261018-073518/https",
+      "first": "3846b9a471c52e5a7a4c3b0ace9c2c7a2fa7189a",
+      "final": "7ee897deaf52eb89f8a8bd3667c2915481fd16d2",
+      "checks": [
+        "CLI create",
+        "fast-forward",
+        "idempotent replay",
+        "spent grant denied",
+        "protected/default/foreign branch denied",
+        "history rollback denied",
+        "changed plan denied",
+        "remote tip preserved"
+      ]
+    }
+  ],
+  "existing_refs_unchanged": true,
+  "new_refs": {
+    "refs/heads/broker-e2e/20261018-073518/ssh": "ed7a8c2341a1e1ea3c19cc5c151979d21bb6a3da",
+    "refs/heads/broker-e2e/20261018-073518/https": "7ee897deaf52eb89f8a8bd3667c2915481fd16d2"
+  },
+  "same_uid_test_only": true,
+  "credentials_in_report": false
+}
