@@ -1,15 +1,25 @@
 # Agent Git Access Broker — Security and Production Specification
 
-Version: 0.3, Linux shared-VM and standing-policy draft
+Version: 0.4, implementation-backed requirements and release gates
 Date: 2026-10-17
 Owner: Project operator
 Status: Requirements draft. Not approved for production deployment.
+
+## Implementation status
+
+The repository now contains Python source, CLI, UDS API, MCP adapter, and adversarial tests.
+See [README.md](README.md), [verification evidence](docs/VERIFICATION.md), and
+[production gates](docs/DEPLOYMENT.md). Requirements below remain target requirements;
+they are not all implemented. Native `git broker-push` is supported. Ordinary `git push`
+is not transparently intercepted. Read currently means branch-tip metadata.
+Provider API merge, tags, production parser isolation, and live provider-rule discovery
+are not implemented. Jev/Strands remains optional advisory design, not an authority.
 
 ## 1. Purpose and status
 
 Build a credential broker and executor for AI agents that use GitHub and GitLab. Agents receive limited broker capabilities, not upstream credentials. The broker must authorize each remote write and perform it on the agent's behalf.
 
-This specification draws on unYOLO's separation of generic authorization from provider execution. It does not adopt unYOLO wholesale or certify its security. The choice to extend, fork, depend on, or independently implement its components is unresolved.
+This specification draws on unYOLO's separation of generic authorization from provider execution. It does not adopt unYOLO wholesale or certify its security. The initial implementation uses unYOLO as a design reference. It does not copy or depend on its source.
 
 MUST indicates a release requirement. SHOULD indicates a recommended control with a documented exception process. PROPOSED indicates an unapproved design choice. OPEN indicates a required decision. An unanswered question does not authorize the proposed answer.
 
@@ -97,7 +107,7 @@ Logical components:
 
 PROPOSED: one management experience and policy schema, with separate GitHub and GitLab worker identities and credential domains. Shared UI does not require one process with every credential.
 
-PROPOSED: reuse reviewed unYOLO authorization, grant lifecycle, protocol, and Git parsing components. Keep new GitLab code in a provider adapter. Maintain a pinned dependency or fork with an upstream-update review process.
+IMPLEMENTED INITIAL CHOICE: independently implement typed authorization, durable grants, and generic Git execution. Keep unYOLO as a pinned design reference. Any future source reuse requires license and security review.
 
 Initial platform: Linux, with broker and agents in the same local VM. Implementation ownership model and language remain OPEN. Support for other platforms is deferred.
 

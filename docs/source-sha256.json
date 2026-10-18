@@ -1,0 +1,23 @@
+{
+  "Dockerfile.test": "2d375cbc8d0c306582f1ea7b6a19f9536eeb827e75a9499e9d1fddeb5e2ec85e",
+  "pyproject.toml": "f1837bcec28e1c2001f5821d7ceaa8cc4e1605e20f09ac7ba2ae16820d7a6410",
+  "src/git_broker/__init__.py": "d7f300983c139f54e0cded16ed50f6ce8ac7d043ff1eefdfdfa9053b87fd04e9",
+  "src/git_broker/cli.py": "b828781e017d40dc7725d1d4658dcc7ca003b2a177c532c583895de934123d24",
+  "src/git_broker/client.py": "f76f75347c578bfbc7672816c4085fad8f524f7cc3cc102d71c6dd936b27adc4",
+  "src/git_broker/errors.py": "c2bf983d5e5d5b4a07876514eb118c5bda2f19a5c5f20b14f670eca84ff65bee",
+  "src/git_broker/executor.py": "99a36e53205bb5765db85dd8a55f0abbe8b90ea3e5bc3ed076c0363aa6ab3618",
+  "src/git_broker/files.py": "2c9e9deb64ec53456fad1b90efb3081118f08f9315441d0f0be711c7fb31e238",
+  "src/git_broker/git_limits.py": "f999ea3df7b941718d5855393a0d4b461a43e0d08e84ec4b89d35d2a66eba6c2",
+  "src/git_broker/models.py": "4b4451e8860da51cb364cb3bd6dbce8d6bb6545b68fb7563f0a6bc380745ea13",
+  "src/git_broker/policy.py": "34935af878736e19b3792a2cfd8b2c546a979f72a29d751c94fad2d3780f9ac7",
+  "src/git_broker/server.py": "fb77d78b47daded21cd700009a43d64733b0a4a999244e5ec2f847c793d7b121",
+  "src/git_broker/service.py": "f6cd9a2d6876ef84e3edf66e5b81f276944ab55afad97c90b2a3a4217b087a4c",
+  "src/git_broker/state.py": "047d12205985abfd21d0e1d94b3bd4dbcb4042a4ce7f668751950ec4687bae48",
+  "src/git_broker/vault.py": "71eb6e0e4e0d5eba64b9319ce2d6ed7b25a5845db6bd68fcfdd3c516689de933",
+  "tests/test_adversarial.py": "355d9f93d4f6f0181c9d2b43693802e059f6594519c1b9921e192360eb7f7d22",
+  "tests/test_executor.py": "b9295ae9cf16343d817b2380829f68337a8e55c350b1d5f4b90cf06a7f36ee82",
+  "tests/test_integration.py": "090edb96a970053cd41a8fb54ffd69d72e8cf9e285a83060eb18742a6c6962b5",
+  "tests/test_state.py": "58620585e6cd331f56cc3f8956c80a8fbdbeae950e90ee6d32c51010e61a105f",
+  "tests/test_transport.py": "c7c1cb4306d17ef5f199d1d77c17ff1fb51f8fa91052293518923c639767ed9d",
+  "uv.lock": "f6d1912443c27c86098e54c94d573ac585b2b4066e58a06a1105b5a9196b3793"
+}

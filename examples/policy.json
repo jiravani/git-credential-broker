@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "repositories": {
+    "project": {
+      "backend": "ssh",
+      "remote": "ssh://git@gitlab.example.com/team/project.git",
+      "credential": "gitlab-project",
+      "known_hosts": "/etc/git-broker/known_hosts",
+      "default_branch": "main",
+      "protected": ["main", "master", "release/*"],
+      "automation_reviewed": false
+    }
+  },
+  "principals": {
+    "agent-one": {
+      "max_session_seconds": 3600,
+      "max_operations": 20,
+      "max_grant_seconds": 60,
+      "rules": [{
+        "repository": "project",
+        "operations": ["read", "push"],
+        "branches": ["agents/agent-one/*"]
+      }]
+    }
+  }
+}
