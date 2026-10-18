@@ -8,3 +8,7 @@
 !tests/
 !tests/**
 **/__pycache__/
+
+!Dockerfile.isolation
+!scripts/
+!scripts/linux_isolation_test.py

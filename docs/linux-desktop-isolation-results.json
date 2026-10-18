@@ -1,0 +1,118 @@
+{
+  "platform": "Linux x86_64 Desktop container",
+  "broker_uid": 21001,
+  "agent_uid": 21002,
+  "outsider_uid": 21003,
+  "checks": [
+    {
+      "check": "authorized agent can call scope through group socket",
+      "passed": true
+    },
+    {
+      "check": "cross-UID agent feature push through broker succeeds",
+      "passed": true
+    },
+    {
+      "check": "cross-UID agent protected branch push denied",
+      "passed": true
+    },
+    {
+      "check": "broker confirms only feature ref exists",
+      "passed": true
+    },
+    {
+      "check": "agent cannot bypass broker to read remote refs",
+      "passed": true
+    },
+    {
+      "check": "agent cannot read vault master key",
+      "passed": true
+    },
+    {
+      "check": "agent cannot read encrypted credential",
+      "passed": true
+    },
+    {
+      "check": "agent cannot read policy",
+      "passed": true
+    },
+    {
+      "check": "agent cannot read plaintext canary",
+      "passed": true
+    },
+    {
+      "check": "agent cannot edit policy",
+      "passed": true
+    },
+    {
+      "check": "agent cannot replace vault key",
+      "passed": true
+    },
+    {
+      "check": "agent cannot unlink broker socket",
+      "passed": true
+    },
+    {
+      "check": "outsider cannot connect socket",
+      "passed": true
+    },
+    {
+      "check": "outsider cannot read agent session",
+      "passed": true
+    },
+    {
+      "check": "agent cannot read broker process environment",
+      "passed": true
+    },
+    {
+      "check": "agent cannot open broker process memory",
+      "passed": true
+    },
+    {
+      "check": "agent cannot signal broker",
+      "passed": true
+    },
+    {
+      "check": "agent cannot become root",
+      "passed": true
+    },
+    {
+      "check": "ptrace attach to broker denied",
+      "passed": true
+    },
+    {
+      "check": "agent has no capabilities and no_new_privs is set",
+      "passed": true
+    },
+    {
+      "check": "no Docker socket or SSH agent available",
+      "passed": true
+    },
+    {
+      "check": "no external network interface",
+      "passed": true
+    },
+    {
+      "check": "public egress unavailable",
+      "passed": true
+    },
+    {
+      "check": "socket access without token is insufficient",
+      "passed": true
+    },
+    {
+      "check": "agent cannot call owner policy operation",
+      "passed": true
+    }
+  ],
+  "passed": 25,
+  "real_credentials_used": false,
+  "cross_uid_only_not_parser_sandbox": true,
+  "regression_output": "........................................................................ [ 50%]\n.......................................................................  [100%]\n143 passed in 10.55s",
+  "image_id": "sha256:b0100c79fa38add18621d8b7a608d40f6f83d1b64e3d224d5add1c605d946846",
+  "harness_sha256": {
+    "scripts/linux_isolation_test.py": "5eb940b6cb27972a664b07e1c29d9b88d70ef51347c1f05470832bf7cb7256eb",
+    "Dockerfile.isolation": "2df61b12fce967af26a3bca824329178e241191431b01738fda2151238111817",
+    ".dockerignore": "18d03565e76b98542ec26cd0475f3eebe3c21477404c7d85e2dfb15816f4e59a"
+  }
+}

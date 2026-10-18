@@ -1,0 +1,16 @@
+FROM python:3.12-slim
+RUN apt-get update && apt-get install -y --no-install-recommends git openssh-client util-linux \
+    && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir uv==0.9.4
+WORKDIR /code
+COPY pyproject.toml uv.lock README.md ./
+COPY src ./src
+RUN uv sync --frozen
+COPY tests ./tests
+COPY scripts/linux_isolation_test.py ./scripts/linux_isolation_test.py
+RUN chmod -R a+rX /code && groupadd -g 21100 broker-clients \
+    && useradd -u 21001 -m broker \
+    && useradd -u 21002 -m agent \
+    && useradd -u 21003 -m outsider
+ENV PATH="/code/.venv/bin:/usr/bin:/bin"
+CMD ["python", "scripts/linux_isolation_test.py"]

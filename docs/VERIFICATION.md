@@ -10,6 +10,12 @@ GitHub SSH and HTTPS checks now pass against disposable branches. See
 [GITHUB-LIVE-TEST.md](GITHUB-LIVE-TEST.md). This does not close Linux isolation
 or GitLab Enterprise gates. The original offline evidence below remains unchanged.
 
+## Desktop Linux follow-up
+
+25 cross-UID isolation checks and all 143 regression tests passed in a
+network-disabled Desktop container. See [LINUX-DESKTOP-ISOLATION.md](LINUX-DESKTOP-ISOLATION.md).
+This is fixture-specific evidence, not parser sandboxing or production deployment approval.
+
 ## Observed results
 
 - macOS ARM64: **143 tests passed**, zero failures, zero skips.
